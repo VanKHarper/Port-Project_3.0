@@ -1,0 +1,47 @@
+/* 
+Sass Mixins file. 
+Created by: Van Harper, 9/18/2018. 
+*/
+
+
+/* Transitions */
+
+@mixin  standard-transition {
+    background-color: $_hover-background-color;
+    color: $_hover-text-color;
+    border: .1em solid $_tealish-color;
+    transition-delay: 15ms;
+    transform: scale(1.05);
+    transition-duration: .75s;        
+	}
+
+@mixin index-transition {
+    transition: all;			
+	transition-duration: 30s;
+	transition-delay: 1s;
+	transform: rotate(359deg) scale(.0005);
+}
+
+@mixin footer-transition {
+    filter: opacity(.785);
+    transition: all;
+	transition-delay: 15ms;
+	transition-duration: .5s;
+    transform: scale(1.025) rotateZ(1.75deg);   
+}
+
+/* About Page */
+
+@mixin about-border {    
+
+		h1 {			
+			text-align: center;					
+		}
+
+		ul {
+        text-align: center;
+		border: .25em double $_darkGreen-font-color;
+        width: 45%;		
+        margin-left: 25%;
+		}
+}

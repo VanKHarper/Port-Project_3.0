@@ -1,0 +1,35 @@
+/*
+Sass Variables file.
+Created by: Van Harper, 9/18/2018. 
+*/
+
+/*  Colors */
+$_visited-color: #e6000038;
+$_h3-font-color:  #004d4d;
+$_darkGreen-font-color: #003333;
+$_darkTeal-color:#036a77e1;
+$_whiteish-color: #e6ffff;
+$_tealish-color: #80d7ff;
+$_teal-color:  #008080;
+$_black-color: #050c1f;
+$_grey-color: #332a51;
+$_hover-background-color: #00331f;
+$_hover-text-color: #b3ecff;
+$_success-color: rgb(118, 245, 118);
+
+/* Border Styles */
+$_small-border-width: .12em .12em .12em .12em;
+$_button-border-radius: 1em;
+$_button-border-radius_mobile_and_tablet: .5em;
+$_button-border: .2em solid $_tealish-color;
+$_button-border_mobile_and_tablet: .05em solid $_tealish-color;
+
+/* Margins for main elements of bigger displays */
+$_main-big-left-margin: 36%;
+$_main-left-margin: 12%;
+$_main-smaller-left-margin: 8.5%;
+$_main-smallest-left-margin: 2%;
+
+/* Box Shadow Styles */
+$_outer-header-box-shadow: .8em .8em .9em $_darkTeal-color;
+$_inner-header-box-shadow: .55em .55em .6em $_teal-color;

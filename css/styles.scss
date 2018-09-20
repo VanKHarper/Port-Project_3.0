@@ -1,0 +1,829 @@
+/* 
+Stylesheet file.
+Created by: Van Harper, 9/15/2018. 
+*/
+
+/* Variables and Mixins imports */
+@import '_variables.scss';
+@import '_mixins.scss';
+
+
+/* Styles for the All and Home page */
+
+/* Style for header element */
+
+    header {
+		
+		 border: .05em solid $_darkTeal-color;
+         border-radius: 3em;
+         padding: 1em; 
+         box-shadow: $_outer-header-box-shadow;
+		 background-color: $_tealish-color;
+
+        background: -webkit-linear-gradient($_whiteish-color, $_tealish-color);	 /* For Edge 6.1 */
+        background: -o-linear-gradient($_whiteish-color, $_tealish-color);	 /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient($_whiteish-color, $_tealish-color); 	/* For Firefox 3.6 to 15 */
+        background: linear-gradient($_whiteish-color, $_tealish-color);	 /* Standard syntax  */
+    
+    /* Style for header img element image*/
+         img {			
+             width: 30%;
+             height: 36%;
+             border-radius: 3em;
+             display: block;
+             margin: auto;
+             box-shadow: $_inner-header-box-shadow;	
+             border: .01em solid $_whiteish-color;
+        }
+    }
+
+	/*Default Style for the left margin of the main element for the Contact and Education pages*/
+	main {
+		&.main_edu{
+			margin-left: $_main-left-margin;
+		}
+
+		&.main_con{
+			margin-left: $_main-left-margin;
+		}	
+	}
+
+	/* Style for body specifies a background color */
+	body {
+		background-color: $_whiteish-color; 		
+	}
+
+	/* Style for the button elements*/	
+	button{
+		color: $_whiteish-color;
+		background-color: $_teal-color;
+		cursor: pointer;
+		font-weight: bold;
+		border-radius: $_button-border-radius;
+        
+        /* Hover psuedo class for Nav Buttons */
+	    &:hover:not(.activeHover) {
+			@include standard-transition
+	    }   
+
+    }
+	
+	/* Styles for the photo on the Index page */
+    .index_photo {
+		text-align: center;
+	
+	        img {
+		        border: solid;
+		        border-color: $_darkGreen-font-color;
+                border-width: $_small-border-width;
+				border-radius: 1%;
+				filter: sepia(50%);				
+
+				&:hover {	
+					@include index-transition;					
+				}
+            }
+    }		
+
+	/* Style for the unordered list element */
+	ul {
+		list-style-type: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+	}
+	
+
+	/* Sets the Padding and Margins for the Footer's social media icons to a Default of 0*/
+	.SMicons {
+		margin: 0;
+		padding: 0;	
+	}
+
+	/* Style for the h3 header tags */
+	h3 {
+		font-style: none;
+		font-weight: bold;
+		font-size: 1.8em;
+		font-family: "AR Cena",Times, serif;
+		color: $_h3-font-color;
+		text-align: center;
+	}	
+
+    /* Styles for Footer element */
+    footer {
+        overflow: auto;
+        padding: 2em;
+        text-align: center;
+
+        /* Style for the Icon images in the footer */
+        img {
+                width: 4em;
+                height: 4em;
+				text-align: center;
+				filter: opacity(.85);
+
+					&:hover{
+						@include footer-transition;
+					}
+        }
+	}
+ 
+/* Style for All/Home page closer */
+
+
+
+
+/* Style for About Me page */
+
+	/* Style for the About Me unordered list */
+	main { 
+		li{
+			display: block;
+			list-style-type: none;
+			font-size: 1.5em;
+			font-family: "AR Cena", Times, serif;
+			color: $_h3-font-color;
+			}	
+	}	
+
+	/* Style for the About Me header */
+	h1 {
+		font-style: italic;
+		font-weight: bold;
+		font-size: 2.3em;
+		font-family: "Arial Black",Times, serif;
+		color: $_darkGreen-font-color;
+	}
+
+	/*Mixin styles for the About Page */
+	div.workList {
+		@include about-border;
+	}
+
+	div.aboutList {
+		@include about-border;
+	}
+
+
+/* Style for About Me closer */
+
+
+
+
+/* Style for the Education page */
+	
+
+	/* Style for the links on the education page */
+	a.ed_links {	
+		color: none;
+		text-align: center;
+        list-style-type: none;
+        
+        /* Psuedo class for visited links */
+	    &:visited {
+		    color: $_visited-color;
+	    }
+	}	
+
+	/* Style for the h2 tag */
+	h2 {
+		font-style: italic;
+		font-weight: bold;
+		font-size: 2em;
+		font-family: "Arial Black",Times, serif;
+		color: $_darkGreen-font-color;
+	}
+	/* Style for the tabe element */
+	table {
+		border: .25em solid $_black_color;
+		border-color: $_darkGreen-font-color;
+	}
+
+	/* Style for the table header tags */
+	th{
+		font-family: "Arial Julian",Times, serif;
+		border: .15em solid $_black-color;
+		background: #006656;
+		color:  $_whiteish-color;
+		border-color: $_black_color;
+		font-weight: bold;
+		font-size: 1.4em;
+	}
+
+	/* Style for the table data tags */
+	td {
+		font-family: "Arial Black",Times, serif;
+		border: .15em solid $_black-color;
+		color: $_grey-color;
+		border-color: $_black_color;
+		font-size: 1em;
+	}
+
+	
+
+/* Style for the Education page closer */
+
+
+
+/* Style for the Contact page */
+
+	/* Style for the label element */
+	label {
+		font-family: "Arial Julian",Times, serif;
+		font-size: 1.5em;
+		box-sizing: border-box;
+		font-weight: bold;
+		color:  $_grey-color;
+	}
+	
+
+	/* Style for the paragraph tags */
+	p {	
+		font-family: "Arial Julian",Times, serif;
+		font-size: 1.5em;
+		font-weight: bold;
+		color:  $_grey-color;
+	}
+
+	/* Style for the submit button on the Contact Form */
+	input[type=submit] {
+		border: .1em solid;
+		padding: .3em 1.1em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1em;
+		margin: auto;
+		color: $_whiteish-color;
+		background-color: $_teal-color;
+		cursor: pointer;
+		font-weight: bold;
+		width: 20%;
+		border-radius: $_button-border-radius;
+
+	/* Style for the submit button hover psuedo class */
+		&:hover {
+				@include standard-transition				
+		}
+	}
+
+/* Style for the Contact page closer */
+
+
+
+
+
+/* Mobile media query for displays under 481px*/
+
+@media only screen and (max-width: 480px) {
+
+	/*Style for the left margin of the main element for the Contact and Education pages*/
+	main {
+		&.main_con {
+			margin-left: $_main-smallest-left-margin;
+		}
+
+		&.main_edu{
+			margin-left: 0%;
+		}
+	}
+
+	/* Styles for the text ont he about page */
+	div.workList {
+		margin-left: -10%;		
+
+		h1 {			
+			margin-left: 0%;					
+		}
+
+		ul {
+		padding: .5em .5em .5em .5em;
+		margin-top: -.8%;
+		border: .20em double $_darkGreen-font-color;
+		width: 60%;		
+		}
+	}
+
+	div.aboutList {
+		margin-left: -10%;		
+
+		h1 {			
+			margin-left: 0%;					
+		}
+
+		ul {
+		padding: .5em .5em .5em .5em;
+		margin-top: -.8%;
+		border: .20em double $_darkGreen-font-color;
+		width: 55%;		
+		}
+	}	
+
+	/*Style to center the phone number and email on the Contact page */
+	div.myContact2 p {
+		text-align: center
+	}
+	
+	/* Style for the nav element */
+	nav {
+		margin-top: .4em;		
+	}
+	
+	/* Style for the anachor element */
+	a {
+		display: block;
+		padding: .01em;
+	}
+	
+	li {		
+		text-align: center; 
+	}
+	
+	button {
+		cursor: pointer;
+		border: .05em solid;
+		padding: .1em 0.3em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: .9em;
+		margin: auto;
+		cursor: pointer;
+	}
+
+	header {
+        
+        display: block;
+		box-shadow: none;
+		padding: .4em;
+		margin-left: .1em;
+		margin-right: none;
+		border-radius: .3em;
+        
+            img {
+		        width: 50%;
+		        height: 50;
+		        border-radius: .3em;		
+		        text-align: right;
+		        display: block;
+		        box-shadow: .2em .15em .1em $_teal-color;
+            }
+        }	
+	
+	/* Styles for the imagees on the Index page */
+	.home img{
+		width: 58%;
+		height: 52%;
+    }
+    
+    .index_photo {		
+	
+	        img {		        
+                width: 70%;
+            }
+	}	
+
+	/* Style for the button elements*/	
+	button{		        
+		border-radius: $_button-border-radius_mobile_and_tablet;
+
+		/* Hover psuedo class for Nav Buttons */
+			&:hover:not(.activeHover) {		        
+				border: $_button-border_mobile_and_tablet;				
+			}  
+	}
+	
+	/*Styles for the Submit Button on the Contact page*/
+	input.sub_button {
+		min-width: 6%;
+		max-width: 30%;
+		height: 2.8em;
+		font-size: .9em;
+		margin-left: 32.5%;
+	}
+
+	/* Style for the About Me unordered list */
+	main {
+            li{
+		        font-size: 1em;
+	        }
+        }
+
+
+	/* Style for the About Me header */
+	h1 {
+	font-size: 1.4em;
+	}
+
+	/* Style for the h2 tag, for the Education headers */
+	h2 {
+	font-size: 1.2em;
+	}
+	
+	/* Styles for the Table ont he Education page */
+
+	th {
+	font-size: 1em;
+	}
+
+	td {
+	font-size: .7em;
+	}	
+
+	input {
+	width: 65%;
+	}
+
+	h3 {
+	font-size: 1.2em;
+	}
+
+	label {
+		font-size: .8em;
+	}
+
+	p {
+		font-size: .8em;
+	}
+	
+	input[type=submit] {
+		width: 35%;
+		font-size: .8em;
+	}
+
+    /* Styles for the social media icons in the footer */
+    
+    footer {
+
+         a {
+		    display: inline;
+        } 
+    
+	    img {
+		    margin: 0;
+            padding: 0;	            
+		    width: 2.2em;
+		    height: 2.2em;
+        }
+    }
+	
+} /* Mobile closer */
+
+
+
+
+/* Tablet media query for displas over 480 and below 861px */
+
+@media only screen and (min-width: 481px) and (max-width: 860px) {
+
+	/*Style for the left margin of the main element for the Contact and Education pages*/
+	main {
+
+		&.main_con {
+			margin-left: $_main-big-left-margin;
+		}
+
+		&.main_edu{
+			margin-left: $_main-smaller-left-margin;
+		}
+	}
+
+	div.workList {
+		margin-left: 0.5%;		
+
+		h1 {			
+			margin-left: 0.5%;
+					
+		}
+
+		ul {
+		padding: .5em .5em .5em .5em;
+		margin-top: -.8%;
+		border: .20em double $_darkGreen-font-color;
+		width: 55%;		
+		}
+	}
+
+	div.aboutList {
+		margin-left: 0.5%;		
+
+		h1 {			
+			margin-left: 0.5%;
+					
+		}
+
+		ul {
+		padding: .5em .5em .5em .5em;
+		margin-top: -.8%;
+		border: .20em double $_darkGreen-font-color;
+		width: 55%;		
+		}
+	}
+	
+	header {		 	
+		 padding: none;
+		 box-shadow: .4em .3em .2em $_teal-color;
+		 margin-bottom:.3em;
+
+		 img {
+			border-radius: .8em;
+			margin: auto;
+			text-align: center;
+		}
+	}
+	
+	.home img{
+		width: 32%;
+		height:	42%;
+	}
+
+    .index_photo {		
+	
+        img {		        
+            max-width: 75%;
+            border-radius: 2px;
+        }
+	}
+
+button{	
+	border-radius: $_button-border-radius_mobile_and_tablet;
+	
+		/* Hover psuedo class for Nav Buttons */
+	&:hover:not(.activeHover) {		        
+			border: $_button-border_mobile_and_tablet;				
+	} 
+}
+
+/*styles for the Submit button of the contact form*/
+input.sub_button {
+	min-width: 10%;
+	max-width: 35%;
+	height: 3.1em;
+	font-size: .98em;
+	margin-left: 7.5%;
+}
+	
+	/* Style for the nav element */
+	nav {
+		margin-top: 1em;
+		text-align: center;
+	}
+	
+	button {
+		border: .1em solid;
+		padding: .2em .6em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: .9em;
+		margin: auto;
+	}
+
+	/* Stle for the anachor element */
+	a {
+		display: block;
+		padding: .1em;
+	}
+
+	footer {
+        
+        a {
+		    display: inline;		
+        }
+    }
+
+	/* Style for the About Me unordered list */
+	main li{
+		font-size: 1.1em;
+	}
+
+	/* Style for the About Me header */
+	h1 {
+		font-size: 1.7em;
+	}
+
+	/* Style for the h2 tag, for the Education headers */
+	h2 {
+		font-size: 1.4em;
+	}
+	
+	/*Styles for the table on the education page */
+
+	th {
+		font-size: 1.2em;
+	}
+
+	td {
+		font-size: 1em;
+	}
+
+		
+	h3 {
+	font-size: 1.5em;
+	}	
+
+	label {
+		font-size: 1.1em;
+	}
+
+	p {
+		font-size: 1.1em;
+	}	
+	
+	/* Style for the text area on the Contact Form */
+	input {
+		width: 34%;
+	}
+
+	input[type=submit] {
+		width: 30%;
+	}
+	
+	/* Styles for the social media icons in the footer */
+	footer img {
+		margin: 0;
+		padding-right: .5em;	
+		padding-left: .5em;	
+		float: center;
+		max-width: 3em;
+		height: 3em;
+	}
+
+	
+} /* tablet media query close */
+
+
+
+
+
+/* Media query for desktop viewport targets screens with a minimum width of 830px */
+
+@media only screen and (min-width: 861px) and (max-width: 1200px) {
+
+	/*Style for the left margin of the main element for the Contact and Education pages*/
+	main {
+		&.main_con {
+			margin-left: $_main-big-left-margin;
+		}
+		&.main_edu{
+			margin-left: $_main-left-margin;
+		}
+	}	
+	
+	button {
+		border: .1em solid;
+		padding:.75em 1.3em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1em;
+	}
+
+	/* Style for the nav element */
+	nav {
+		margin-top: 1.8em;
+	}
+
+	li {
+		display: inline;
+		margin-left: .2em;
+		margin-right: .2em;
+	}
+
+	/* Stle for the anachor element */
+	a {
+        padding: 1.4em;
+	}	
+	
+	.home img{
+		width: 35%;
+		height: 43%;
+	}
+	
+	/*styles for the Submit button of the contact form*/
+	input.sub_button {
+		min-width: 10%;
+		height: 2.9em;
+		font-size: 1em;
+		margin-left: 6%;
+	}
+    
+    .index_photo {		
+	
+        img {		        
+            max-width: 80%;
+        }
+    }
+
+	.links {
+		float: center;
+		text-align: center;
+	}
+
+	footer {
+		margin-top: 0.5em;
+
+		img {
+			min-width: 3.6%;				
+		}
+	}
+
+	/* Style for the text area on the Contact Form */
+	input {
+		width: 20%;	
+
+		&[type=submit] {
+			width: 20%;
+		}
+	}
+    
+
+
+}/* Desktop media query close */
+
+
+
+
+/* Media quer for widerscreen displays over 1200px */
+
+@media only screen and (min-width: 1201px){
+
+	/*Style for the left margin of the main element for the Contact and Education pages*/
+	main {
+		&.main_con {
+			margin-left: $_main-big-left-margin;
+		}
+
+		&.main_edu{
+			margin-left: 25%;
+		}
+	}	
+	
+	button {
+		border: .1em solid;
+		padding: 1.1em 1.7em;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.3em;
+	}
+
+	/* Style for the nav element */
+	nav {
+		margin-top: 2em;
+	}
+
+	li {
+		display: inline;
+		margin-left: .2em;
+		margin-right: .2em;
+	}
+
+	/* Stle for the anachor element */
+	a {
+        padding: 1.5em;
+	}	
+	
+	.home img {
+		width: 35%;
+		height: 45%;
+	}
+
+	/*styles for the Submit button */
+	input.sub_button {
+		min-width: 11%;
+		height: 3em;
+		font-size: 1.02em;
+		margin-left: 6.5%;
+	}
+
+	.links {
+		float: center;
+		text-align: center;
+	}
+
+	footer {
+		margin-top: 0.5em;
+
+			img {
+				min-width: 3.75%;				
+			}
+	}
+
+	/* Style for the text area on the Contact Form */
+	input {
+		width: 20%;
+	}
+
+	input[type=submit] {
+		width: 15%;
+	}
+	
+	label {
+		font-size:1.7em;
+	}
+
+
+}/* Widescreen media query close*/
+
